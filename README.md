@@ -1,24 +1,8 @@
-# react-amplitude 
+# react-amplitude-without-webpack
+
+# Fork from react-amplitude
+
 ### React Amplitude Analytics
-
-[![npm version](https://img.shields.io/npm/v/react-amplitude.svg?style=flat-square)](https://www.npmjs.com/package/react-amplitude)
-[![npm downloads](https://img.shields.io/npm/dm/react-amplitude.svg?style=flat-square)](https://www.npmjs.com/package/react-amplitude)
-
-This is a JavaScript module that can be used to include Amplitude Analytics tracking code in a website or app that uses [React](https://facebook.github.io/react/) for its front-end codebase.
-
-Feel free to file [issues, ideas and pull requests against this repo](https://github.com/react-amplitude/react-amplitude/issues).
-
-## Installation
-
-With [yarn](https://yarnpkg.com/en/docs/getting-started//):
-```bash
-yarn add react-amplitude
-```
-
-With [npm](https://www.npmjs.com/):
-```bash
-npm install react-amplitude --save
-```
 
 ## Usage
 
@@ -51,12 +35,12 @@ Must be initialized using this function before any of the other tracking functio
 Amplitude.init(apiKey, userId, config, cb);
 ```
 
-|Value|Notes|
-|------|-----|
-|apiKey| `String`. Required.|
-|userId| `String`. Optional.|
-|config| `Object`. Optional.|
-|callback| `Function`. Optional.|
+| Value    | Notes                 |
+| -------- | --------------------- |
+| apiKey   | `String`. Required.   |
+| userId   | `String`. Optional.   |
+| config   | `Object`. Optional.   |
+| callback | `Function`. Optional. |
 
 #### Amplitude.logEvent(eventName, eventProperties, callback)
 
@@ -68,11 +52,11 @@ Log an event to Amplitude.
 Amplitude.logEvent(eventName, eventProperties, cb);
 ```
 
-|Value|Notes|
-|------|-----|
-|eventName| `String`. Required.|
-|eventProperties| `Object`. Optional.|
-|callback| `Function`. Optional.|
+| Value           | Notes                 |
+| --------------- | --------------------- |
+| eventName       | `String`. Required.   |
+| eventProperties | `Object`. Optional.   |
+| callback        | `Function`. Optional. |
 
 #### Amplitude.logEventWithTimestamp(eventName, eventProperties, timestamp, callback)
 
@@ -84,12 +68,12 @@ Log an event to Amplitude.
 Amplitude.logEventWithTimestamp(eventName, eventProperties, timestamp, cb);
 ```
 
-|Value|Notes|
-|------|-----|
-|eventName| `String`. Required.|
-|eventProperties| `Object`. Optional.|
-|timestamp| `Number`. Optional.|
-|callback| `Function`. Optional.|
+| Value           | Notes                 |
+| --------------- | --------------------- |
+| eventName       | `String`. Required.   |
+| eventProperties | `Object`. Optional.   |
+| timestamp       | `Number`. Optional.   |
+| callback        | `Function`. Optional. |
 
 #### Amplitude.resetUserId()
 
@@ -111,9 +95,9 @@ Track users through a unique user id.
 Amplitude.setUserId(userId);
 ```
 
-|Value|Notes|
-|------|-----|
-|userId| `String`. Required.|
+| Value  | Notes               |
+| ------ | ------------------- |
+| userId | `String`. Required. |
 
 #### Amplitude.setUserProperties(userProps)
 
@@ -125,9 +109,9 @@ Track user properties
 Amplitude.setUserProperties(userProps);
 ```
 
-|Value|Notes|
-|------|-----|
-|userProps| `object`. Required.|
+| Value     | Notes               |
+| --------- | ------------------- |
+| userProps | `object`. Required. |
 
 #### Amplitude.clearUserProperties()
 
@@ -160,10 +144,10 @@ Send an identify call containing user property operations to Amplitude servers
 Amplitude.identify(idObj, cb);
 ```
 
-|Value|Notes|
-|------|-----|
-|idObj| `object`. Required.|
-|callback| `Function`. Optional.|
+| Value    | Notes                 |
+| -------- | --------------------- |
+| idObj    | `object`. Required.   |
+| callback | `Function`. Optional. |
 
 #### Amplitude.isNewSession()
 
@@ -174,22 +158,3 @@ Returns if a new session was created at init
 ```js
 Amplitude.isNewSession();
 ```
-
-
-## Development
-
-```bash
-git clone https://github.com/rorygarand/react-amplitude.git
-yarn install
-npm run build
-```
-
-#### Acknowledgements
-
-* [react-ga](https://github.com/react-ga/react-ga)
-
-#### Contributors
-
-* [chasedut](https://github.com/chasedut)
-* [emilioastarita](https://github.com/emilioastarita)
-* [lol-russo](https://github.com/lol-russo)
